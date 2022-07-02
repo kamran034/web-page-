@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>assignment</title>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	
+      <div class="login-form">
+	  <h1>student Detail</h1>
+	  <form action="table.html" method="GET">
+	  <p> Name</P>
+	  <input type="text" name="name" id=" name" placeholder=" Name">
+	  <p>Father Name</P>
+	  <input type="text" name="father_name" id="fathe_rname" placeholder="Father Name">
+	  <p>Phone</P>
+	  <input type="text" name="phone" id="phone" placeholder="contact">
+	  <p>Email</P>
+	  <input type="text" id="email" name="email" placeholder="Email" >
+	  <p>Instituion</P>
+	  <input type="text"  name="instituion" id="instituion" placeholder="instituion">
+	  <p>Class</P>
+	  <input type="text" name="user" placeholder="Class"></br>
+	  
+	 <input type="submit" name="beforeSubmit" >
+	 <!-- <a href="http://www.google.com"<button type="button" > submits</button> </a>-->
+	  </form>
+	 <!--- <button type="button" onclick= "location.href ="second.html"" > submits</button>-->
+	  
+	  <!---<button type="button" id="submit_button" onclick="beforeSubmit()">Submit</button>-->
+	 <script>
+		function beforeSubmit() {
+
+			error = false;
+
+			for (let i = 1; i < 5; i++) {
+				var total = document.getElementById(`${i}_total`).value;
+				var Obtained = document.getElementById(`${i}_obtained`).value;
+
+				if (parseInt(Obtained) > parseInt(total)) {
+					error = true;
+				}
+			}
+
+			var element = document.getElementById('name').value;
+			if (element == '') {
+				error = true;
+			}
+			element = document.getElementById('father_name').value;
+			if (element == '') {
+				error = true;
+			}
+			element = document.getElementById('phone').value;
+			if (element == '') {
+				error = true;
+			}
+			element = document.getElementById('email').value;
+			if (element == '') {
+				error = true;
+			}
+			element = document.getElementById('instituion').value;
+			if (element == '') {
+				error = true;
+			}
+
+			if (error) {
+				//Nothing Happens
+				//Form will not be submitted
+			} else {
+				//No Error
+				//Form Submit
+				document.getElementById('formid').submit();
+			}
+		}
+	</script>
+	
+
+
+
+
+
+	  </div>
+	
+</body>
+</html>
